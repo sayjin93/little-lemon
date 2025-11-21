@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './CallToAction.css';
 
 const CallToAction = () => {
@@ -11,7 +12,9 @@ const CallToAction = () => {
             We are a family owned Mediterranean restaurant,
             focused on traditional recipes served with a modern twist.
           </p>
-          <button className="reserve-button">Reserve a Table</button>
+          <Link to="/booking">
+            <button className="reserve-button">Reserve a Table</button>
+          </Link>
         </div>
         <div className="hero-image">
           <img src="/images/restauranfood.jpg" alt="Little Lemon restaurant dish" />

@@ -1,0 +1,58 @@
+.booking-page {
+  min-height: calc(100vh - 200px);
+  background-color: #fff;
+  padding: 4rem 2rem;
+
+  .booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 500;
+      color: var(--primary-green);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--highlight-black);
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 3rem 1.5rem;
+
+    .booking-container {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-page {
+    padding: 2rem 1rem;
+
+    .booking-container {
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
