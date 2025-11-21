@@ -37,14 +37,14 @@ const CustomersSay = () => {
   };
 
   return (
-    <section className="testimonials">
-      <h2>Testimonials</h2>
-      <div className="testimonials-grid">
+    <section className="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Testimonials</h2>
+      <div className="testimonials-grid" role="list">
         {testimonials.map(testimonial => (
-          <article key={testimonial.id} className="testimonial-card">
-            <div className="rating">{renderStars(testimonial.rating)}</div>
+          <article key={testimonial.id} className="testimonial-card" role="listitem">
+            <div className="rating" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>{renderStars(testimonial.rating)}</div>
             <div className="user-info">
-              <img src={testimonial.photo} alt={testimonial.name} className="user-photo" />
+              <img src={testimonial.photo} alt={`${testimonial.name}'s profile photo`} className="user-photo" />
               <h3>{testimonial.name}</h3>
             </div>
             <p className="review">{testimonial.review}</p>

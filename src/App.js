@@ -36,7 +36,7 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <main>
+      <main role="main" id="main-content">
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route 

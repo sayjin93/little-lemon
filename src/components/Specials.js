@@ -26,22 +26,22 @@ const Specials = () => {
   ];
 
   return (
-    <section className="specials">
+    <section className="specials" aria-labelledby="specials-title">
       <div className="specials-header">
-        <h2>Specials</h2>
-        <button className="online-menu-button">Online Menu</button>
+        <h2 id="specials-title">Specials</h2>
+        <button className="online-menu-button" aria-label="View online menu">Online Menu</button>
       </div>
-      <div className="specials-cards">
+      <div className="specials-cards" role="list">
         {specials.map(special => (
-          <article key={special.id} className="special-card">
-            <img src={special.image} alt={special.name} />
+          <article key={special.id} className="special-card" role="listitem">
+            <img src={special.image} alt={`${special.name} - ${special.description.slice(0, 50)}...`} />
             <div className="special-content">
               <div className="special-header">
                 <h3>{special.name}</h3>
-                <span className="price">{special.price}</span>
+                <span className="price" aria-label={`Price: ${special.price}`}>{special.price}</span>
               </div>
               <p>{special.description}</p>
-              <a href="/order" className="order-link">Order a delivery</a>
+              <a href="/order" className="order-link" aria-label={`Order ${special.name} for delivery`}>Order a delivery</a>
             </div>
           </article>
         ))}

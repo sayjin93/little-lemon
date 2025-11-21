@@ -23,20 +23,30 @@ const Nav = () => {
 
   return (
     <header>
-      <nav>
+      <nav aria-label="Main navigation">
         <img src="/images/Logo.svg" alt="Little Lemon Logo" className="logo" />
-        <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
+        <button 
+          className="hamburger" 
+          onClick={toggleMenu} 
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="main-menu"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul className={isMenuOpen ? 'active' : ''}>
-          <li><Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link></li>
-          <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT</Link></li>
-          <li><Link to="/menu" onClick={() => setIsMenuOpen(false)}>MENU</Link></li>
-          <li><Link to="/booking" onClick={() => setIsMenuOpen(false)}>RESERVATIONS</Link></li>
-          <li><Link to="/order" onClick={() => setIsMenuOpen(false)}>ORDER ONLINE</Link></li>
-          <li><Link to="/login" onClick={() => setIsMenuOpen(false)}>LOGIN</Link></li>
+        <ul 
+          id="main-menu"
+          className={isMenuOpen ? 'active' : ''}
+          role="menu"
+        >
+          <li role="none"><Link to="/" onClick={() => setIsMenuOpen(false)} role="menuitem">HOME</Link></li>
+          <li role="none"><Link to="/about" onClick={() => setIsMenuOpen(false)} role="menuitem">ABOUT</Link></li>
+          <li role="none"><Link to="/menu" onClick={() => setIsMenuOpen(false)} role="menuitem">MENU</Link></li>
+          <li role="none"><Link to="/booking" onClick={() => setIsMenuOpen(false)} role="menuitem">RESERVATIONS</Link></li>
+          <li role="none"><Link to="/order" onClick={() => setIsMenuOpen(false)} role="menuitem">ORDER ONLINE</Link></li>
+          <li role="none"><Link to="/login" onClick={() => setIsMenuOpen(false)} role="menuitem">LOGIN</Link></li>
         </ul>
       </nav>
     </header>

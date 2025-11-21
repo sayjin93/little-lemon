@@ -3,9 +3,9 @@ import './BookingPage.css';
 
 const BookingPage = ({ availableTimes, dispatch }) => {
   return (
-    <section className="booking-page">
+    <section className="booking-page" aria-labelledby="booking-page-title">
       <div className="booking-container">
-        <h1>Reserve a Table</h1>
+        <h1 id="booking-page-title">Reserve a Table</h1>
         <p>Book your table at Little Lemon for an unforgettable dining experience.</p>
         <BookingForm 
           availableTimes={availableTimes} 
