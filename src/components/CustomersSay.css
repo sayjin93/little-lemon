@@ -1,0 +1,138 @@
+.testimonials {
+  background-color: var(--primary-green);
+  color: #fff;
+  padding: 4rem 2rem;
+
+  h2 {
+    font-family: var(--font-display);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background-color: #fff;
+    color: var(--highlight-black);
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .rating {
+      color: var(--primary-yellow);
+      font-size: 1.2rem;
+    }
+
+    .user-info {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+
+      .user-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+
+    .review {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .testimonials {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .testimonials-grid {
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      padding: 1.25rem;
+
+      .rating {
+        font-size: 1rem;
+      }
+
+      .review {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .testimonial-card {
+      padding: 1rem;
+
+      .user-info {
+        gap: 0.75rem;
+
+        .user-photo {
+          width: 40px;
+          height: 40px;
+        }
+
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

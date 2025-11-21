@@ -1,23 +1,21 @@
-import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Specials from './components/Specials';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Homepage from './pages/Homepage';
+import BookingPage from './pages/BookingPage';
 
 function App() {
   return (
-    <>
-      <Header />
+    <BrowserRouter>
+      <Nav />
       <main>
-        <Hero />
-        <Specials />
-        <Testimonials />
-        <About />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/booking" element={<BookingPage />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

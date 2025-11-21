@@ -1,15 +1,15 @@
-import React from 'react';
+import './Chicago.css';
 
-const About = () => {
+const Chicago = () => {
   return (
     <section className="about">
       <div className="about-content">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>
         <p>
-          Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non 
-          enim praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare 
+          Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non
+          enim praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi
+          etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare
           quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae.
         </p>
       </div>
@@ -21,4 +21,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Chicago;

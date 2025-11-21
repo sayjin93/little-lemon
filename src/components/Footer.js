@@ -1,4 +1,4 @@
-import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-logo">
           <img src="/images/Logo.svg" alt="Little Lemon Logo" />
         </div>
-        
+
         <div className="footer-navigation">
           <h4>Doormat Navigation</h4>
           <nav>

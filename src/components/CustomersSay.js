@@ -1,6 +1,6 @@
-import React from 'react';
+import './CustomersSay.css';
 
-const Testimonials = () => {
+const CustomersSay = () => {
   const testimonials = [
     {
       id: 1,
@@ -55,4 +55,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default CustomersSay;
